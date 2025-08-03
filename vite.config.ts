@@ -15,6 +15,7 @@ export default defineConfig(({ mode }) => ({
     analog({
       prerender: {
         routes: [
+          '/',
           '/blog',
           '/blog/posts/build-analog-blog',
           '/blog/posts/git-tutorial',
