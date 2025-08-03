@@ -31,10 +31,14 @@ export default defineConfig(({ mode }) => ({
           // '/blog/posts/view-transition-api',
           '/about',
           '/contact',
+          '/404.html',
         ],
       },
       nitro: {
-        preset: 'vercel',
+        // preset: 'vercel',
+        routeRules: {
+          '/404.html': { prerender: false },
+        }
       },
     }),
   ],
