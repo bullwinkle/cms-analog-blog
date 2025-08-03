@@ -11,10 +11,9 @@ interface PageAttributes {
 }
 
 @Component({
-  selector: 'app-pages-index',
-  standalone: true,
-  imports: [RouterLink, NgFor, AsyncPipe],
-  template: `
+    selector: 'app-pages-index',
+    imports: [RouterLink, NgFor, AsyncPipe],
+    template: `
     <h1>Pages</h1>
     <div *ngIf="pages$ | async as pages">
       <article *ngFor="let page of pages">
@@ -25,7 +24,7 @@ interface PageAttributes {
         </a>
       </article>
     </div>
-  `,
+  `
 })
 export default class PagesIndexPageComponent {
   protected pages$ = injectContentFiles<PageAttributes>()

@@ -12,9 +12,8 @@ export interface ProjectAttributes {
 }
 
 @Component({
-  standalone: true,
-  imports: [MarkdownComponent, AsyncPipe, NgIf, RouterLink],
-  template: `
+    imports: [MarkdownComponent, AsyncPipe, NgIf, RouterLink],
+    template: `
     <ng-container *ngIf="project$ | async as project">
       <article class="flex flex-col">
         <a routerLink="/projects" class="btn items-center mb-8 w-64 flex flex-row">
@@ -29,7 +28,7 @@ export interface ProjectAttributes {
         <analog-markdown [content]="project.content"></analog-markdown>
       </article>
     </ng-container>
-  `,
+  `
 })
 export default class ProjectPage {
   readonly project$ = injectContent<ProjectAttributes>({

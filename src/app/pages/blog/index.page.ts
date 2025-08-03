@@ -11,9 +11,8 @@ export interface PostAttributes {
 }
 
 @Component({
-  standalone: true,
-  imports: [RouterOutlet, RouterLink, NgFor],
-  template: `
+    imports: [RouterOutlet, RouterLink, NgFor],
+    template: `
     <div class="bg-base-100 py-24 sm:py-32">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0">
@@ -63,15 +62,15 @@ export interface PostAttributes {
       </div>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       :host {
         display: flex;
         flex: 1;
         flex-direction: column;
       }
     `,
-  ],
+    ]
 })
 export default class BlogComponent {
   readonly posts = injectContentFiles<PostAttributes>((contentFile) =>

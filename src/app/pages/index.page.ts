@@ -2,9 +2,8 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  template: `
+    selector: 'app-home',
+    template: `
     <div class="hero">
       <div class="hero-content text-center">
         <div class="max-w-md flex flex-col items-center">
@@ -27,14 +26,14 @@ import { RouterLink } from '@angular/router';
       </div>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       :host {
         display: flex;
         flex: 1;
       }
     `,
-  ],
-  imports: [RouterLink],
+    ],
+    imports: [RouterLink]
 })
 export default class HomeComponent {}
