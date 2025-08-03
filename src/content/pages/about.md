@@ -2,7 +2,7 @@
 title: About
 slug: about
 description: Learn more about this blog
-coverImage: https://via.placeholder.com/800x400.png?text=About+Page
+coverImage: https://picsum.photos/seed/picsum/800/400
 ---
 
 ## About

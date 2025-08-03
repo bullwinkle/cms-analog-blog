@@ -2,7 +2,7 @@
 title: Contact
 slug: contact
 description: Get in touch with us
-coverImage: https://via.placeholder.com/800x400.png?text=Contact+Page
+coverImage: https://picsum.photos/seed/picsum/800/400
 ---
 
 ## Contact

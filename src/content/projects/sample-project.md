@@ -2,7 +2,7 @@
 title: Sample Project
 slug: sample-project
 description: A sample project description
-coverImage: https://via.placeholder.com/800x400.png?text=Sample+Project
+coverImage: https://picsum.photos/seed/picsum/800/400
 ---
 
 ## Sample Project
