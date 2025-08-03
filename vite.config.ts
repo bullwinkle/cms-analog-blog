@@ -24,35 +24,9 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     analog({
-      // Disable prerendering to reduce memory usage
-      // prerender: {
-      //   routes: [
-      //     '/blog',
-      //     '/about',
-      //     '/contact',
-      //   ],
-      //   // Reduce memory usage during prerendering
-      //   concurrency: 1,
-      // },
-      nitro: {
-        preset: 'vercel',
-        rollupConfig: {
-          output: {
-            manualChunks: {
-              'angular-ssr': ['@angular/platform-server'],
-            }
-          }
-        },
-        // Optimize memory usage for SSR builds
-        experimental: {
-          wasm: false
-        },
-        minify: false, // Reduce memory during minification
-        storage: {
-          // Disable file system cache to reduce memory
-          fs: false
-        },
-      },      
+      // Completely disable SSR and prerendering to reduce memory usage
+      ssr: false,
+      nitro: false,
     }),
   ],
   test: {

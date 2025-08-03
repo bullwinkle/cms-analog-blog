@@ -25,6 +25,11 @@
             "production": {
               "sourcemap": false,
               "mode": "production"
+            },
+            "client-only": {
+              "sourcemap": false,
+              "mode": "production",
+              "ssr": false
             }
           }
         },
