@@ -1,4 +1,4 @@
-<script lang="ts">
+
 import { Component } from '@angular/core';
 import { injectContent, MarkdownComponent } from '@analogjs/content';
 import { AsyncPipe, NgIf } from '@angular/common';
@@ -31,4 +31,4 @@ export default class PageDetailComponent {
     subdirectory: 'pages',
   });
 }
-</script>
+

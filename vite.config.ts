@@ -23,6 +23,9 @@ export default defineConfig(({ mode }) => ({
           '/contact',
         ],
       },
+      nitro: {
+        preset: 'vercel',
+      },      
     }),
   ],
   test: {
