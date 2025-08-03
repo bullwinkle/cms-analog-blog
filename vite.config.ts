@@ -7,6 +7,15 @@ import analog from '@analogjs/platform';
 export default defineConfig(({ mode }) => ({
   build: {
     target: ['es2020'],
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'angular-core': ['@angular/core'],
+          'angular-common': ['@angular/common'],
+          'angular-router': ['@angular/router'],
+        }
+      }
+    }
   },
   resolve: {
     mainFields: ['module'],
@@ -25,6 +34,13 @@ export default defineConfig(({ mode }) => ({
       },
       nitro: {
         preset: 'vercel',
+        rollupConfig: {
+          output: {
+            manualChunks: {
+              'angular-ssr': ['@angular/platform-server'],
+            }
+          }
+        }
       },      
     }),
   ],
