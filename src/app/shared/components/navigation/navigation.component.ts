@@ -18,6 +18,18 @@ export class NavigationComponent {
       path: '/blog',
       label: 'Blog',
     },
+    {
+      path: '/projects',
+      label: 'Projects',
+    },
+    {
+      path: '/pages/about',
+      label: 'Page about',
+    },
+    {
+      path: '/pages/contact',
+      label: 'Page contact',
+    },
   ];
 
   themeService = inject(ThemeService);
