@@ -14,7 +14,9 @@ export default defineConfig(({ mode }) => ({
           'angular-common': ['@angular/common'],
           'angular-router': ['@angular/router'],
         }
-      }
+      },
+      // Reduce memory usage during build
+      maxParallelFileOps: 2,
     }
   },
   resolve: {
@@ -22,16 +24,16 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     analog({
-      prerender: {
-        routes: [
-          '/blog',
-          '/blog/posts/build-analog-blog',
-          '/blog/posts/git-tutorial',
-          '/blog/posts/view-transition-api',
-          '/about',
-          '/contact',
-        ],
-      },
+      // Disable prerendering to reduce memory usage
+      // prerender: {
+      //   routes: [
+      //     '/blog',
+      //     '/about',
+      //     '/contact',
+      //   ],
+      //   // Reduce memory usage during prerendering
+      //   concurrency: 1,
+      // },
       nitro: {
         preset: 'vercel',
         rollupConfig: {
@@ -40,7 +42,16 @@ export default defineConfig(({ mode }) => ({
               'angular-ssr': ['@angular/platform-server'],
             }
           }
-        }
+        },
+        // Optimize memory usage for SSR builds
+        experimental: {
+          wasm: false
+        },
+        minify: false, // Reduce memory during minification
+        storage: {
+          // Disable file system cache to reduce memory
+          fs: false
+        },
       },      
     }),
   ],
