@@ -15,7 +15,7 @@
     "test": "ng test"
   },
   "dependencies": {
-        "@analogjs/content": "^1.19.3",
+    "@analogjs/content": "^1.19.3",
     "@analogjs/router": "^1.19.3",
     "marked": "^15.0.7",
     "marked-gfm-heading-id": "^4.1.1",
@@ -33,7 +33,6 @@
     "@angular/ssr": "^20.1.4",
     "front-matter": "^4.0.2",
     "mermaid": "^10.2.4",
-    "nx": "^21.3.11",
     "prismjs": "^1.29.0",
     "rxjs": "~7.5.6",
     "tslib": "^2.4.0"
