@@ -1,4 +1,4 @@
-<script lang="ts">
+
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { injectContentFiles } from '@analogjs/content';
@@ -31,5 +31,4 @@ interface PageAttributes {
 export default class PagesIndexPageComponent {
   protected pages$ = injectContentFiles<PageAttributes>()
     .filter((page) => page.slug.startsWith('/src/content/pages/'));
-}
-</script>
+
