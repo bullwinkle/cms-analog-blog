@@ -22,14 +22,6 @@ export class NavigationComponent {
       path: '/projects',
       label: 'Projects',
     },
-    {
-      path: '/pages/about',
-      label: 'Page about',
-    },
-    {
-      path: '/pages/contact',
-      label: 'Page contact',
-    },
   ];
 
   themeService = inject(ThemeService);
