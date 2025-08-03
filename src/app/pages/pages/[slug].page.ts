@@ -12,10 +12,9 @@ interface PageAttributes {
 }
 
 @Component({
-  selector: 'app-page-detail',
-  standalone: true,
-  imports: [MarkdownComponent, AsyncPipe, NgIf, RouterLink],
-  template: `
+    selector: 'app-page-detail',
+    imports: [MarkdownComponent, AsyncPipe, NgIf, RouterLink],
+    template: `
     <ng-container *ngIf="page$ | async as page">
       <a routerLink="/pages">\u2190 All pages</a>
       <h1>{{ page.attributes.title }}</h1>
@@ -23,7 +22,7 @@ interface PageAttributes {
       <img *ngIf="page.attributes.coverImage" [src]="page.attributes.coverImage" [alt]="page.attributes.title + ' cover image'" />
       <analog-markdown [content]="page.content"></analog-markdown>
     </ng-container>
-  `,
+  `
 })
 export default class PageDetailComponent {
   protected page$ = injectContent<PageAttributes>({

@@ -2,9 +2,8 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-about',
-  standalone: true,
-  template: `
+    selector: 'app-about',
+    template: `
     <section class="flex items-center flex-col">
       <h1 class="font-bold md:text-5xl text-3xl py-8">About</h1>
 
@@ -150,15 +149,15 @@ import { RouterLink, RouterModule } from '@angular/router';
       </ul>
     </section>
   `,
-  styles: [
-    `
+    styles: [
+        `
       :host {
         display: flex;
         flex: 1;
         flex-direction: column;
       }
     `,
-  ],
-  imports: [RouterLink],
+    ],
+    imports: [RouterLink]
 })
 export default class AboutComponent {}

@@ -12,9 +12,8 @@ export interface ProjectAttributes {
 }
 
 @Component({
-  standalone: true,
-  imports: [RouterLink, NgFor],
-  template: `
+    imports: [RouterLink, NgFor],
+    template: `
     <section class="flex flex-col items-center">
       <h1 class="font-bold text-5xl py-8">Projects</h1>
       <div class="mt-8 border-t border-gray-200 flex gap-4 flex-wrap pt-10 w-full">
@@ -27,7 +26,7 @@ export interface ProjectAttributes {
         </article>
       </div>
     </section>
-  `,
+  `
 })
 export default class ProjectsIndexPage {
   readonly projects = injectContentFiles<ProjectAttributes>((contentFile) =>

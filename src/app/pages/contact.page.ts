@@ -2,9 +2,8 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-contact',
-  standalone: true,
-  template: `
+    selector: 'app-contact',
+    template: `
     <section class="flex items-center flex-col">
       <h1 class="font-bold md:text-5xl text-3xl py-8">Contact</h1>
       <div
@@ -53,15 +52,15 @@ import { RouterLink } from '@angular/router';
       </div>
     </section>
   `,
-  styles: [
-    `
+    styles: [
+        `
       :host {
         display: flex;
         flex: 1;
         flex-direction: column;
       }
     `,
-  ],
-  imports: [RouterLink],
+    ],
+    imports: [RouterLink]
 })
 export default class ContactComponent {}

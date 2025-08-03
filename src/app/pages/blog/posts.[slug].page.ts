@@ -12,9 +12,8 @@ export interface PostAttributes {
 }
 
 @Component({
-  standalone: true,
-  imports: [MarkdownComponent, AsyncPipe, NgIf, RouterLink],
-  template: `
+    imports: [MarkdownComponent, AsyncPipe, NgIf, RouterLink],
+    template: `
     <ng-container *ngIf="post$ | async as post">
       <article
         class="flex flex-col prose prose-slate  dark:prose-invert md:max-w-4xl py-16 w-full px-4"
@@ -60,14 +59,14 @@ export interface PostAttributes {
       </article>
     </ng-container>
   `,
-  styles: [
-    `
+    styles: [
+        `
       :host {
         display: flex;
         justify-content: center;
       }
     `,
-  ],
+    ]
 })
 export default class BlogPostComponent {
   readonly post$ = injectContent<PostAttributes>({

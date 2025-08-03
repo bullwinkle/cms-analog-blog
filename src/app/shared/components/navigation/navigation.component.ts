@@ -4,11 +4,10 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { THEMES, ThemeService } from '../../services/theme.service';
 
 @Component({
-  selector: 'app-navigation',
-  standalone: true,
-  imports: [CommonModule, RouterLink, RouterLinkActive],
-  templateUrl: './navigation.component.html',
-  styles: [],
+    selector: 'app-navigation',
+    imports: [CommonModule, RouterLink, RouterLinkActive],
+    templateUrl: './navigation.component.html',
+    styles: []
 })
 export class NavigationComponent {
   links = [
