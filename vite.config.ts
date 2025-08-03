@@ -18,6 +18,7 @@ export default defineConfig(({ mode }) => ({
           '/',
           '/blog',
           '/blog/posts/build-analog-blog',
+          '/blog/posts/bun-better-then-nodejs',
           '/blog/posts/git-tutorial',
           '/blog/posts/view-transition-api',
           '/about',
